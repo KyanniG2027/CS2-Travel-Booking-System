@@ -24,37 +24,50 @@ public class EurooTrip{
         this.destinations = p;
     }
    
-   public int getprocesFee(){
+    //ACCESSORS 
+   public int getProcesFee(){
          return procesFee;
-
-    public String getTravlerName(){
-        return getTravlerName;
+   }
+    public String getTravelerName(){
+        return TravelerName;
     }
-    public int getdurationInDays(){
+    public int getDurationInDays(){
         return durationInDays;
     }
 
-    public boolean getfivestarHotel()[
+    public boolean getFivestarHotel(){
         return fivestarHotel;
-    ]
+    }
     
-    public double getluggageWeight(){
+    public double getLuggageWeight(){
         return luggageWeight;
     }
-    public String getdestinations(){
-        return destintations; 
-    }
-  
-  
-  
+    public String getDestinations(){
+        return destinations; 
+    
    }
 
+   //SETTERS & MUTATORS 
+
+   public void setTravelerName (String newTravelerName){
+    this.TravelerName = newTravelerName;
+    }
+    public void setdurationInDays(int newDurationInDays){
+        this.DurationInDays = newDurationInDays; 
+     }
+     public void setFivestarHotel (boolean newFivestarHotel){
+        this.FivestarHotel = newFivestarHotel; 
+     }
+     public void LuggageWeight (double newLuggageWeight){
+        this.LuggageWeight = newLuggageWeight; 
+     }
 
 
 
 
-
-
+     public void setTotalCost (){
+        this.TotalCost = processFee * this.durationInDays;
+     }
 
 
 
