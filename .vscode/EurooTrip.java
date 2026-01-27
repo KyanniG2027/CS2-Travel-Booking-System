@@ -58,16 +58,35 @@ public class EurooTrip{
      public void setFivestarHotel (boolean newFivestarHotel){
         this.FivestarHotel = newFivestarHotel; 
      }
-     public void LuggageWeight (double newLuggageWeight){
+     public void setLuggageWeight (double newLuggageWeight){
         this.LuggageWeight = newLuggageWeight; 
      }
-
+     public void setDestinations (String newDestination){
+        this.Destinations = newDestination;
+     }
 
 
 
      public void setTotalCost (){
         this.TotalCost = processFee * this.durationInDays;
      }
+
+     public String toString(){
+     String itinerary = "-----------------------------------------\n" +
+                     "       🇪🇸🏖️ EUROO TRIP ☀️✨        \n" +
+                     "-----------------------------------------\n" +
+                     "GUEST NAME:    " + travelerName + "\n" +
+                     "STAY DURATION: " + DurationInDays + " Nights\n" +
+                     "LUXURY RATING: " + FivestarHotel + " / 5.0 ⭐️\n" +
+                     "Luggage Weight" + LuggageWeight + "\n" +
+                     "DESTINATION:   " + destination + "\n" +
+                     "-----------------------------------------\n" +
+                     "TOTAL COST:  $" + TotalPackageCost + ".00\n" +
+                     "-----------------------------------------\n" +
+                     "  Thank you for booking with Wanderlust! \n";
+    return itinerary;  
+}
+
 
 
 
