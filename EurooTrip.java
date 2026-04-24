@@ -1,17 +1,18 @@
 public class EurooTrip{
     //INSTANCE VARIABlES (data)
-    private static int procesFee = 1000;
+    private static int processFee = 1000;
     private  String TravelerName;
     private int durationInDays;
     private boolean fivestarHotel;    
     private double luggageWeight;
     private String destinations; 
+    private double TotalCost;
     
     //CONSTRUCTORS (defult + parameterized)
     public EurooTrip(){
         this.TravelerName = "DefaultClient"; 
         this.durationInDays= 14; 
-        this.fivestarHotel= yes;
+        this.fivestarHotel= true;
         this.luggageWeight= 80; 
         this.destinations= "Europe Trip🛳️🗺️🇪🇸🌟";
     }
@@ -26,7 +27,7 @@ public class EurooTrip{
    
     //ACCESSORS 
    public int getProcesFee(){
-         return procesFee;
+         return processFee;
    }
     public String getTravelerName(){
         return TravelerName;
@@ -53,16 +54,16 @@ public class EurooTrip{
     this.TravelerName = newTravelerName;
     }
     public void setdurationInDays(int newDurationInDays){
-        this.DurationInDays = newDurationInDays; 
+        this.durationInDays = newDurationInDays; 
      }
      public void setFivestarHotel (boolean newFivestarHotel){
-        this.FivestarHotel = newFivestarHotel; 
+        this.fivestarHotel = newFivestarHotel; 
      }
      public void setLuggageWeight (double newLuggageWeight){
-        this.LuggageWeight = newLuggageWeight; 
+        this.luggageWeight = newLuggageWeight; 
      }
      public void setDestinations (String newDestination){
-        this.Destinations = newDestination;
+        this.destinations = newDestination;
      }
 
 
@@ -75,13 +76,13 @@ public class EurooTrip{
      String itinerary = "-----------------------------------------\n" +
                      "       🇪🇸🏖️ EUROO TRIP ☀️✨        \n" +
                      "-----------------------------------------\n" +
-                     "GUEST NAME:    " + travelerName + "\n" +
-                     "STAY DURATION: " + DurationInDays + " Nights\n" +
-                     "LUXURY RATING: " + FivestarHotel + " / 5.0 ⭐️\n" +
-                     "Luggage Weight" + LuggageWeight + "\n" +
-                     "DESTINATION:   " + destination + "\n" +
+                     "GUEST NAME:    " + TravelerName + "\n" +
+                     "STAY DURATION: " + durationInDays + " Nights\n" +
+                     "LUXURY RATING: " + fivestarHotel + " / 5.0 ⭐️\n" +
+                     "Luggage Weight" + luggageWeight + "\n" +
+                     "DESTINATION:   " + destinations + "\n" +
                      "-----------------------------------------\n" +
-                     "TOTAL COST:  $" + TotalPackageCost + ".00\n" +
+                     "TOTAL COST:  $" + TotalCost + ".00\n" +
                      "-----------------------------------------\n" +
                      "  Thank you for booking with Wanderlust! \n";
     return itinerary;  
